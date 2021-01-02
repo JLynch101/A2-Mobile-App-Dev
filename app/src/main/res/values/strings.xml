@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Your Finances</string>
+    <string name="app_name">Finance</string>
+    <string name="hint_financeTitle">Finance Title</string>
+    <string name="hint_financeDescription">Description </string>
+    <string name="button_addFinance">Add Finance</string>
+    <string name="menu_addFinance">Add</string>
+    <string name="menu_cancelFinance">Cancel</string>
+    <string name="enter_finance_title"> Please enter a Finance Title </string>
+    <string name="save_finance"> Save Finance </string>
+    <string name="button_addImage"> Add Image </string>
+    <string name="select_finance_image">Select finance image</string>
+    <string name="change_finance_image">Change finance image</string>
+    <string name="button_location">Set Location</string>
+    <string name="title_activity_map">Map</string>
+    <string name="google_maps_key">INSERT YOUR KEY HERE</string>
 </resources>
