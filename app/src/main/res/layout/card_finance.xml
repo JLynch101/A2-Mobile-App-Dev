@@ -9,12 +9,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="#416194">
 
         <ImageView
             android:id="@+id/imageIcon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"/>
@@ -25,14 +26,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/imageIcon"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/financeTitle"
-            android:layout_toRightOf="@+id/imageIcon"/>
+            android:layout_toRightOf="@+id/imageIcon"
+            android:textColor="#FFFFFF"/>/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
