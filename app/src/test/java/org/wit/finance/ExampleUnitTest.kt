@@ -1,4 +1,4 @@
-package org.wit.financeapp
+package org.wit.finance
 
 import org.junit.Test
 

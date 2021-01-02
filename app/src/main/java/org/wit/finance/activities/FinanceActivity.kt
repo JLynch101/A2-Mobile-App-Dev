@@ -16,7 +16,7 @@ import org.wit.finance.helpers.showImagePicker
 import org.wit.finance.main.MainApp
 import org.wit.finance.models.Location
 import org.wit.finance.models.FinanceModel
-import org.wit.financeapp.R
+import org.wit.finance.R
 
 class FinanceActivity : AppCompatActivity(), AnkoLogger {
 

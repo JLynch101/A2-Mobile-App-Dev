@@ -5,14 +5,13 @@ import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_finance_list.*
 import kotlinx.android.synthetic.main.card_finance.view.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.wit.finance.main.MainApp
 import org.wit.finance.models.FinanceModel
-import org.wit.financeapp.R
+import org.wit.finance.R
 
 class FinanceListActivity : AppCompatActivity(), FinanceListener {
 
