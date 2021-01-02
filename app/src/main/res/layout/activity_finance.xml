@@ -52,7 +52,6 @@
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
-                    android:
                     android:padding="8dp"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
