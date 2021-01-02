@@ -18,5 +18,6 @@
     <string name="finance_image_placeholder">Finance Imagee</string>
     <string name="finance_title_placeholder">Finance Title</string>
     <string name="finance_description_placeholder">Finance Description</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
 

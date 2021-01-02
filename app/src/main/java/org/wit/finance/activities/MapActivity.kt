@@ -2,8 +2,9 @@ package org.wit.finance.activities
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -14,8 +15,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import org.wit.finance.R
 import org.wit.finance.models.Location
 
-
-class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerDragListener, GoogleMap.OnMarkerClickListener {
+class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerDragListener {
 
     private lateinit var map: GoogleMap
     var location = Location()
@@ -31,8 +31,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerD
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-        map.setOnMarkerDragListener(this)
-        map.setOnMarkerClickListener(this)
         val loc = LatLng(location.lat, location.lng)
         val options = MarkerOptions()
             .title("Finance")
@@ -40,6 +38,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerD
             .draggable(true)
             .position(loc)
         map.addMarker(options)
+        map.setOnMarkerDragListener(this)
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, location.zoom))
     }
 
@@ -62,11 +61,4 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerD
         finish()
         super.onBackPressed()
     }
-
-    override fun onMarkerClick(marker: Marker): Boolean {
-        val loc = LatLng(location.lat, location.lng)
-        marker.setSnippet("GPS : " + loc.toString())
-        return false
-    }
 }
-
