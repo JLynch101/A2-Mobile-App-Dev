@@ -66,5 +66,8 @@ class FinanceJSONStore : FinanceStore, AnkoLogger {
         val jsonString = read(context, JSON_FILE)
         finances = Gson().fromJson(jsonString, listType)
     }
+    override fun findById(id: Long): FinanceModel? {
+        return finances.find { it.id == id }
+    }
 }
 

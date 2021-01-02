@@ -43,5 +43,8 @@ class FinanceMemStore : FinanceStore, AnkoLogger {
     fun logAll() {
         finances.forEach { info("${it}") }
     }
+    override fun findById(id: Long): FinanceModel? {
+        return finances.find { it.id == id }
+    }
 }
 

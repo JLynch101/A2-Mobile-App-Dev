@@ -11,6 +11,7 @@ import org.wit.finance.R
 import kotlinx.android.synthetic.main.activity_finance_maps.*
 import kotlinx.android.synthetic.main.content_finance_maps.*
 import org.wit.finance.main.MainApp
+import org.wit.finance.models.FinanceModel
 
 class FinanceMapsActivity : AppCompatActivity(), GoogleMap.OnMarkerClickListener {
 
@@ -37,13 +38,20 @@ class FinanceMapsActivity : AppCompatActivity(), GoogleMap.OnMarkerClickListener
             val options = MarkerOptions().title(it.title).position(loc)
             map.addMarker(options).tag = it.id
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, it.zoom))
+
         }
     }
 
     override fun onMarkerClick(marker: Marker): Boolean {
-        currentTitle.text = marker.title
-        return false
+        val tag = marker.tag as Long
+        val finance = app.finances.findById(tag)
+        currentTitle.text = finance!!.title
+        currentDescription.text = finance.description
+        return true
+
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()

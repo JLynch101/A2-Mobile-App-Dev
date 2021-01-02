@@ -15,7 +15,7 @@
     <string name="google_maps_key">INSERT KEY HERE</string>
     <string name="menu_deleteFinance">Delete</string>
     <string name="title_activity_finance_maps">Map of All Finances </string>
-    <string name="finance_image_placeholder">Finance Imagee</string>
+    <string name="finance_image_placeholder">Finance Image</string>
     <string name="finance_title_placeholder">Finance Title</string>
     <string name="finance_description_placeholder">Finance Description</string>
     <string name="title_activity_maps">Map</string>
