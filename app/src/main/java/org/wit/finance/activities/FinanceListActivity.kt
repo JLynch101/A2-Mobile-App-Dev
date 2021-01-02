@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.card_finance.view.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.wit.finance.R
+
 import org.wit.finance.main.MainApp
 import org.wit.finance.models.FinanceModel
 
