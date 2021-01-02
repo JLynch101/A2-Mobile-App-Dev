@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.wit.finance.activities.FinanceActivity">
+    tools:context="org.wit.finance.activities.FinanceActivity"
+    android:background="#050F4C">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,7 +65,7 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp"/>
 
                 <Button
@@ -72,11 +73,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="#000000"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
                     android:text="@string/button_addImage"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
                     android:textSize="16sp"/>
 
                 <ImageView
@@ -90,12 +91,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="#000000"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
                     android:stateListAnimator="@null"
                     android:text="@string/button_location"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
                     android:textSize="16sp"/>
 
                 <Button
@@ -103,12 +104,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="#000000"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:stateListAnimator="@null"
                     android:text="@string/button_addFinance"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
         </ScrollView>
