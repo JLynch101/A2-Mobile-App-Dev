@@ -10,13 +10,13 @@ import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
+import org.wit.finance.R
 import org.wit.finance.helpers.readImage
 import org.wit.finance.helpers.readImageFromPath
 import org.wit.finance.helpers.showImagePicker
 import org.wit.finance.main.MainApp
 import org.wit.finance.models.Location
 import org.wit.finance.models.FinanceModel
-import org.wit.finance.R
 
 class FinanceActivity : AppCompatActivity(), AnkoLogger {
 
@@ -24,7 +24,6 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
     val LOCATION_REQUEST = 2
-    var location = Location(52.245696, -7.139102, 15f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +69,12 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
         }
 
         financeLocation.setOnClickListener {
+            val location = Location(52.245696, -7.139102, 15f)
+            if (finance.zoom != 0f) {
+                location.lat = finance.lat
+                location.lng = finance.lng
+                location.zoom = finance.zoom
+            }
             startActivityForResult(intentFor<MapActivity>().putExtra("location", location), LOCATION_REQUEST)
         }
     }
@@ -100,7 +105,10 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
             }
             LOCATION_REQUEST -> {
                 if (data != null) {
-                    location = data.extras?.getParcelable<Location>("location")!!
+                    val location = data.extras?.getParcelable<Location>("location")!!
+                    finance.lat = location.lat
+                    finance.lng = location.lng
+                    finance.zoom = location.zoom
                 }
             }
         }

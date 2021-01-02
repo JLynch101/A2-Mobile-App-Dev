@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.BitmapFactory.decodeResource
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.provider.MediaStore
@@ -26,9 +25,9 @@ fun readImage(activity: Activity, resultCode: Int, data: Intent?): Bitmap? {
     if (resultCode == Activity.RESULT_OK && data != null && data.data != null) {
         try {
             //bitmap = MediaStore.Images.Media.getBitmap(activity.contentResolver, data.data)
-            bitmap = ImageDecoder.decodeBitmap(ImageDecoder.createSource(activity.contentResolver,
-                data.data!!
-            ))
+            bitmap = ImageDecoder.decodeBitmap(
+                ImageDecoder.createSource(activity.contentResolver, data.data!!
+                ))
         } catch (e: IOException) {
             e.printStackTrace()
         }

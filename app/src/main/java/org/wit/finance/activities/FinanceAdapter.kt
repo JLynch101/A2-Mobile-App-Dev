@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_finance.view.*
+import org.wit.finance.R
 import org.wit.finance.helpers.readImageFromPath
 import org.wit.finance.models.FinanceModel
-import org.wit.finance.R
 
 interface FinanceListener {
     fun onFinanceClick(finance: FinanceModel)
@@ -37,4 +37,5 @@ class FinanceAdapter constructor(private var finances: List<FinanceModel>,
         }
     }
 }
+
 

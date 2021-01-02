@@ -29,6 +29,9 @@ class FinanceMemStore : FinanceStore, AnkoLogger {
             foundFinance.title = finance.title
             foundFinance.description = finance.description
             foundFinance.image = finance.image
+            foundFinance.lat = finance.lat
+            foundFinance.lng = finance.lng
+            foundFinance.zoom = finance.zoom
             logAll();
         }
     }
@@ -37,4 +40,6 @@ class FinanceMemStore : FinanceStore, AnkoLogger {
         finances.forEach { info("${it}") }
     }
 }
+
+
 

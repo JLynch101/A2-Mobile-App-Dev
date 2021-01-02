@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.card_finance.view.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.wit.finance.R
-
 import org.wit.finance.main.MainApp
 import org.wit.finance.models.FinanceModel
 
@@ -29,6 +28,16 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = FinanceAdapter(app.finances.findAll(), this)
+        loadFinances()
+    }
+
+    private fun loadFinances() {
+        showFinances( app.finances.findAll())
+    }
+
+    fun showFinances (finances: List<FinanceModel>) {
+        recyclerView.adapter = FinanceAdapter(finances, this)
+        recyclerView.adapter?.notifyDataSetChanged()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -48,7 +57,7 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        recyclerView.adapter?.notifyDataSetChanged()
+        loadFinances()
         super.onActivityResult(requestCode, resultCode, data)
     }
 }
