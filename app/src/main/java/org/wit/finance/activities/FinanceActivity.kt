@@ -24,6 +24,7 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
     val LOCATION_REQUEST = 2
+    var edit = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,6 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
         info("Finance Activity started..")
 
         app = application as MainApp
-        var edit = false
 
         if (intent.hasExtra("finance_edit")) {
             edit = true
@@ -56,6 +56,7 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
                 if (edit) {
                     app.finances.update(finance.copy())
                 } else {
+
                     app.finances.create(finance.copy())
                 }
             }
@@ -81,11 +82,16 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_finance, menu)
+        if (edit && menu != null) menu.getItem(0).setVisible(true)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.item_delete -> {
+                app.finances.delete(finance)
+                finish()
+            }
             R.id.item_cancel -> {
                 finish()
             }

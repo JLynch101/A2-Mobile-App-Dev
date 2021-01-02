@@ -38,4 +38,3 @@ class FinanceAdapter constructor(private var finances: List<FinanceModel>,
     }
 }
 
-

@@ -36,10 +36,12 @@ class FinanceMemStore : FinanceStore, AnkoLogger {
         }
     }
 
+    override fun delete(finance: FinanceModel) {
+        finances.remove(finance)
+    }
+
     fun logAll() {
         finances.forEach { info("${it}") }
     }
 }
-
-
 

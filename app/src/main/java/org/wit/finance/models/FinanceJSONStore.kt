@@ -52,6 +52,11 @@ class FinanceJSONStore : FinanceStore, AnkoLogger {
         serialize()
     }
 
+    override fun delete(finance: FinanceModel) {
+        finances.remove(finance)
+        serialize()
+    }
+
     private fun serialize() {
         val jsonString = gsonBuilder.toJson(finances, listType)
         write(context, JSON_FILE, jsonString)

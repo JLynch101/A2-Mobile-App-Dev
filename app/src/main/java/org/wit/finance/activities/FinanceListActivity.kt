@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_finance_list.*
 import kotlinx.android.synthetic.main.card_finance.view.*
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.startActivityForResult
 import org.wit.finance.R
 import org.wit.finance.main.MainApp
@@ -47,7 +48,8 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.item_add -> startActivityForResult<FinanceActivity>(0)
+            R.id.item_add -> startActivityForResult<FinanceActivity>(200)
+            R.id.item_map -> startActivity<FinanceMapsActivity>()
         }
         return super.onOptionsItemSelected(item)
     }
