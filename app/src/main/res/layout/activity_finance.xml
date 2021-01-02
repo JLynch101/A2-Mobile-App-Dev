@@ -7,111 +7,112 @@
     android:layout_height="match_parent"
     tools:context="org.wit.finance.activities.FinanceActivity">
 
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:fitsSystemWindows="true"
-        app:elevation="0dip"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-      <androidx.appcompat.widget.Toolbar
-          android:id="@+id/toolbarAdd"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          app:titleTextColor="@color/colorPrimary" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout"
-        android:fillViewport="true">
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/financeTitle"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_margin="8dp"
-            android:autofillHints=""
-            android:hint="@string/hint_financeTitle"
-            android:inputType="text"
-            android:maxLength="25"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/description"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:hint="@string/hint_financeDescription"
-            android:inputType="text"
-            android:maxLength="25"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp"/>
-
-        <Button
-            android:id="@+id/chooseImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:background="@color/colorAccent"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="@string/button_addImage"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+            android:fitsSystemWindows="true"
+            app:elevation="0dip"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <ImageView
-            android:id="@+id/financeImage"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/colorPrimary" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"/>
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBarLayout"
+            android:fillViewport="true">
 
-        <Button
-            android:id="@+id/financeLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:stateListAnimator="@null"
-            android:text="@string/button_location"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:stateListAnimator="@null"
-            android:text="@string/button_addFinance"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-      </LinearLayout>
-    </ScrollView>
+                <EditText
+                    android:id="@+id/financeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:autofillHints=""
+                    android:hint="@string/hint_financeTitle"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
 
-  </RelativeLayout>
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="@string/hint_financeDescription"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/chooseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/colorAccent"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/button_addImage"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/financeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher"/>
+
+                <Button
+                    android:id="@+id/financeLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/colorAccent"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/button_location"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/colorAccent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/button_addFinance"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
