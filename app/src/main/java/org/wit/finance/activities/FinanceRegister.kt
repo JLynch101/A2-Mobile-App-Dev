@@ -17,10 +17,8 @@ class FinanceRegister : AppCompatActivity () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_screen)
         username_register.setText(name)
-        save_button.setOnClickListener() {
 
-        }
-        register_button.setOnClickListener {
+        login1_button.setOnClickListener {
             startActivity<FinanceLogin>()
         }
     }
