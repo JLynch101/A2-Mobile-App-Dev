@@ -21,6 +21,7 @@ class FinanceJSONStore : FinanceStore, AnkoLogger {
     val context: Context
     var finances = mutableListOf<FinanceModel>()
 
+
     constructor (context: Context) {
         this.context = context
         if (exists(context, JSON_FILE)) {
@@ -37,7 +38,6 @@ class FinanceJSONStore : FinanceStore, AnkoLogger {
         finances.add(finance)
         serialize()
     }
-
     override fun update(finance: FinanceModel) {
         val financesList = findAll() as ArrayList<FinanceModel>
         var foundFinance: FinanceModel? = financesList.find { p -> p.id == finance.id }

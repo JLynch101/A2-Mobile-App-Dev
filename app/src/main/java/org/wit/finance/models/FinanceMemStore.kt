@@ -40,6 +40,8 @@ class FinanceMemStore : FinanceStore, AnkoLogger {
         finances.remove(finance)
     }
 
+
+
     fun logAll() {
         finances.forEach { info("${it}") }
     }

@@ -17,17 +17,26 @@ import org.wit.finance.main.MainApp
 import org.wit.finance.models.Location
 import org.wit.finance.models.FinanceModel
 
-class FinanceLogin : AppCompatActivity (){
+class FinanceLogin : AppCompatActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
 
-        login_button.setOnClickListener{
-            var status=if (login_username.text.toString().equals("Guest") &&login_password.text.toString().equals("guest"))
-                "Login successful" else "Login Failed, Try again!"
+
+        login_button.setOnClickListener {
+            var status =
+                    if (login_username.text.toString().equals("Guest") && login_password.text.toString().equals("guest"))
+                "Login successful"
+            else "Login Failed, Try again!"
         }
         login_button.setOnClickListener {
-            startActivity<FinanceListActivity>() }
-
+            startActivity<FinanceListActivity>()
+        }
+        register_button.setOnClickListener {
+            startActivity<FinanceRegister>()
         }
     }
+}
+
+
+

@@ -21,12 +21,20 @@
         android:layout_height="wrap_content"
         android:hint="password"
         android:inputType="textPassword" />
+
         <Button
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
-            android:text="Log In"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:text="Log In" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="register" />
     </LinearLayout>
 </RelativeLayout>
 
