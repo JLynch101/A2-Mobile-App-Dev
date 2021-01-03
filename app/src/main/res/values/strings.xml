@@ -13,7 +13,7 @@
     <string name="button_location">Set Location</string>
     <string name="title_activity_map">Map</string>
     <string name="google_maps_key">INSERT KEY HERE</string>
-    <string name="menu_deleteFinance">Delete</string>
+    <string name="menu_deleteFinance">Delete </string>
     <string name="title_activity_finance_maps">Map of All Finances </string>
     <string name="finance_image_placeholder">Finance Image</string>
     <string name="finance_title_placeholder">Finance Title</string>

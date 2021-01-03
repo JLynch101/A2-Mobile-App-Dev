@@ -3,12 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
   <item
       android:id="@+id/item_delete"
+      android:checkable="false"
+      android:enabled="false"
       android:title="@string/menu_deleteFinance"
+      android:titleTextColor="#FFFFFF"
       android:visible="false"
       app:showAsAction="always" />
   <item
       android:id="@+id/item_cancel"
+      android:enabled="true"
       android:title="@string/menu_cancelFinance"
-      app:showAsAction="always" />
+      android:titleTextColor="#F30303"
+      android:visible="true"
+      app:showAsAction="always"></item>
 </menu>
 
