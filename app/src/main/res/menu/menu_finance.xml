@@ -4,7 +4,7 @@
   <item
       android:id="@+id/item_delete"
       android:checkable="false"
-      android:enabled="false"
+      android:enabled="true"
       android:title="@string/menu_deleteFinance"
       android:titleTextColor="#FFFFFF"
       android:visible="false"
