@@ -34,7 +34,7 @@
             android:name=".activities.FinanceMapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".activities.FinanceActivity" />
-        <activity android:name=".activities.FinanceListActivity">
+        <activity android:name=".activities.FinanceLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
