@@ -78,7 +78,7 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
 
 
         financeLocation.setOnClickListener {
-            val location = Location(52.245696, -7.139102, 15f)
+            val location = Location(52.33677, -6.46227, 15f)
             if (finance.zoom != 0f) {
                 location.lat = finance.lat
                 location.lng = finance.lng
