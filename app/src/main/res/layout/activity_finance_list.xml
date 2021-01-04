@@ -16,6 +16,7 @@
         app:elevation="0dip"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -29,7 +30,58 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:background="#050F4C"/>
+        android:background="#050F4C">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:accessibilityHeading="false">
+
+        <Button
+            android:id="@+id/nav_home1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginRight="-4dp"
+            android:layout_weight="1"
+            android:background="#0C1C81"
+            android:drawableTop="@drawable/ic_home"
+            android:text="Home"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+></Button>
+
+        <Button
+            android:id="@+id/nav_add1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:layout_weight="1"
+            android:background="#0C1C81"
+            android:drawableTop="@drawable/ic_add"
+            android:text="Add"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="bottom"/>
+
+        <Button
+            android:id="@+id/nav_map1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-3dp"
+            android:layout_weight="1"
+            android:background="#0C1C81"
+            android:drawableTop="@drawable/ic_map"
+            android:text="Map"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="bottom"></Button>
+    </LinearLayout>/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

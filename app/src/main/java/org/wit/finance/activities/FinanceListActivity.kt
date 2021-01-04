@@ -26,6 +26,16 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
         app = application as MainApp
         toolbar.title = title
         setSupportActionBar(toolbar)
+        nav_home1.setOnClickListener {
+            startActivity<FinanceListActivity>()
+        }
+        nav_add1.setOnClickListener {
+            startActivity<FinanceActivity>()
+        }
+        nav_map1.setOnClickListener {
+            startActivity<FinanceMapsActivity>()
+        }
+
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
@@ -34,6 +44,7 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
 
 
     }
+
 
     private fun loadFinances() {
         showFinances( app.finances.findAll())
