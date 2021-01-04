@@ -39,10 +39,10 @@ class FinanceLogin : AppCompatActivity (), View.OnClickListener {
     }
     private fun validate() :Boolean {
         if (login_username.text.toString().isEmpty()) {
-            login_username.error = "Please enter username"
+            login_username.error = "Please enter username!"
             return false
         } else if (login_password.text.toString().isEmpty()) {
-            login_password.error = "Please enter password"
+            login_password.error = "Please enter password!"
             return false
         }
         return true
