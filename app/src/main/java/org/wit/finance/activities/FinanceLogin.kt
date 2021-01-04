@@ -33,6 +33,9 @@ class FinanceLogin : AppCompatActivity (), View.OnClickListener {
         setContentView(R.layout.login_screen)
 
         login_button.setOnClickListener(this)
+        register_button.setOnClickListener {
+            startActivity<FinanceRegister>()
+        }
     }
     private fun validate() :Boolean {
         if (login_username.text.toString().isEmpty()) {
@@ -49,7 +52,7 @@ class FinanceLogin : AppCompatActivity (), View.OnClickListener {
     when(v?.id){
         R.id.login_button->{
             if (validate()){
-                Toast.makeText(applicationContext,"Done",Toast.LENGTH_LONG).show()
+                startActivity<FinanceListActivity>()
             }
         }
 
