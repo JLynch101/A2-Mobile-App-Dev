@@ -19,5 +19,7 @@
     <string name="finance_title_placeholder">Finance Title</string>
     <string name="finance_description_placeholder">Finance Description</string>
     <string name="title_activity_maps">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

@@ -6,6 +6,7 @@ import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_finance.*
 import kotlinx.android.synthetic.main.activity_finance_list.*
 import kotlinx.android.synthetic.main.card_finance.view.*
 import org.jetbrains.anko.intentFor
@@ -30,6 +31,8 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = FinanceAdapter(app.finances.findAll(), this)
         loadFinances()
+
+
     }
 
     private fun loadFinances() {

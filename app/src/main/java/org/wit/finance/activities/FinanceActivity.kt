@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+
 import kotlinx.android.synthetic.main.activity_finance.*
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
-import org.jetbrains.anko.intentFor
-import org.jetbrains.anko.toast
+import kotlinx.android.synthetic.main.login_screen.*
+import org.jetbrains.anko.*
 import org.wit.finance.R
 import org.wit.finance.helpers.readImage
 import org.wit.finance.helpers.readImageFromPath
@@ -26,12 +26,16 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
     val LOCATION_REQUEST = 2
     var edit = false;
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finance)
+
         toolbarAdd.title = title
         setSupportActionBar(toolbarAdd)
+
         info("Finance Activity started..")
+
 
         app = application as MainApp
 
@@ -46,6 +50,7 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
             }
             btnAdd.setText(R.string.save_finance)
         }
+
 
         btnAdd.setOnClickListener() {
             finance.title = financeTitle.text.toString()
@@ -68,6 +73,17 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
+        nav_home.setOnClickListener {
+            startActivity<FinanceListActivity>()
+        }
+        nav_add.setOnClickListener {
+            startActivity<FinanceActivity>()
+        }
+        nav_map.setOnClickListener {
+            startActivity<FinanceMapsActivity>()
+        }
+
+
 
         financeLocation.setOnClickListener {
             val location = Location(52.245696, -7.139102, 15f)
@@ -79,6 +95,8 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
             startActivityForResult(intentFor<MapActivity>().putExtra("location", location), LOCATION_REQUEST)
         }
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_finance, menu)
@@ -116,8 +134,9 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
                     finance.lng = location.lng
                     finance.zoom = location.zoom
                 }
+                }
             }
         }
     }
-}
+
 

@@ -115,8 +115,55 @@
                     android:text="@string/button_addFinance"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
+
+
             </LinearLayout>
         </ScrollView>
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="0dp"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/nav_home"
+                android:textColor="#FFFFFF"
+                android:background="#0C1C81"
+                android:layout_width="match_parent"
+                android:drawableTop="@drawable/ic_home"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginRight="-4dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home">
+            </Button>
+            <Button
+                android:id="@+id/nav_add"
+                android:textColor="#FFFFFF"
+                android:background="#0C1C81"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_add"
+                android:text="Add"/>
+            <Button
+                android:id="@+id/nav_map"
+                android:background="#0C1C81"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-3dp"
+                android:drawableTop="@drawable/ic_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Map">
+            </Button>
+        </LinearLayout>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
