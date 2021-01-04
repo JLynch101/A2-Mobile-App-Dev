@@ -1,40 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_margin="20dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#050F4C"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <EditText
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Finance+"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+        <EditText
         android:id="@+id/login_username"
         android:layout_width="match_parent"
         android:hint="Username"
-        android:layout_height="wrap_content"/>
+        android:paddingLeft="20dp"
+        android:textColorHint="#FFFFFF"
+        android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"/>
 
     <EditText
         android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
         android:inputType="textPassword" />
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Log In"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"/>
 
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Log In" />
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="register"
+        android:layout_margin="10dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"/>/>
+</TableRow>
 
-        <Button
-            android:id="@+id/register_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="register" />
     </LinearLayout>
 </RelativeLayout>
 
