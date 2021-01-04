@@ -22,10 +22,10 @@ class FinanceRegister : AppCompatActivity (), View.OnClickListener {
     }
     private fun validate() :Boolean {
         if (password_register.text.toString().isEmpty()) {
-            password_register.error = "Please enter username!"
+            password_register.error = "Please enter password!"
             return false
         } else if (username_register.text.toString().isEmpty()) {
-            username_register.error = "Please enter password!"
+            username_register.error = "Please enter username!"
             return false
         }
         return true
