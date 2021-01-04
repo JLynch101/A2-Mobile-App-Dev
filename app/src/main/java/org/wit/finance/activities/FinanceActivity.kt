@@ -73,15 +73,7 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
-        nav_home.setOnClickListener {
-            startActivity<FinanceListActivity>()
-        }
-        nav_add.setOnClickListener {
-            startActivity<FinanceActivity>()
-        }
-        nav_map.setOnClickListener {
-            startActivity<FinanceMapsActivity>()
-        }
+
 
 
 
@@ -136,6 +128,15 @@ class FinanceActivity : AppCompatActivity(), AnkoLogger {
                 }
                 }
             }
+        nav_home.setOnClickListener {
+            startActivity<FinanceListActivity>()
+        }
+        nav_add.setOnClickListener {
+            startActivity<FinanceActivity>()
+        }
+        nav_map.setOnClickListener {
+            startActivity<FinanceMapsActivity>()
+        }
         }
     }
 

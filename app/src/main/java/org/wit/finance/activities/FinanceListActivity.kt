@@ -60,13 +60,6 @@ class FinanceListActivity : AppCompatActivity(), FinanceListener {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.item_add -> startActivityForResult<FinanceActivity>(200)
-            R.id.item_map -> startActivity<FinanceMapsActivity>()
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     override fun onFinanceClick(finance: FinanceModel) {
         startActivityForResult(intentFor<FinanceActivity>().putExtra("finance_edit", finance), 0)

@@ -18,7 +18,7 @@
     <string name="finance_image_placeholder">Purchase Image</string>
     <string name="finance_title_placeholder">Purchase Title</string>
     <string name="finance_description_placeholder">Purchase Description</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Purchase Locations</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
