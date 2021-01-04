@@ -1,2 +1,3 @@
-# A2-Mobile-App-Dev
+# Finance+ | Android Application
+ Created by: Joe Lynch
  
