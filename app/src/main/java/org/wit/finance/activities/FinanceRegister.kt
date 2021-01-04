@@ -10,13 +10,11 @@ import org.wit.finance.R
 
 class FinanceRegister : AppCompatActivity () {
 
-    var name: String = ""
-    var username: String = ""
-    var image: String = ""
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_screen)
-        username_register.setText(name)
 
         login1_button.setOnClickListener {
             startActivity<FinanceLogin>()
